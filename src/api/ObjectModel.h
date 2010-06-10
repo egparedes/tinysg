@@ -32,6 +32,7 @@
 
 #include "Property.h"
 #include "Iterator.h"
+#include "Visitor.h"
 
 namespace tinysg {
 

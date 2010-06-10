@@ -35,6 +35,8 @@ using namespace obrsp::linalg;
 #include <boost/foreach.hpp>
 #include <boost/thread/mutex.hpp>
 
+#include <Visitor.h>
+
 namespace tinysg
 {
 
@@ -108,6 +110,9 @@ public:
 	// Generator functions
 	void registerPoseGenerator(PoseGenerator*);
 	const PoseGenerator* getPoseGenerator() {return mpPoseGenerator;}
+
+	// Visitor functions
+	virtual void accept(Visitor* v);
 
 protected:
 	void setParent(SceneNode* n);

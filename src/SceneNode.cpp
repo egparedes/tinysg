@@ -412,4 +412,9 @@ void SceneNode::registerPoseGenerator(PoseGenerator* pGenerator)
 	mpPoseGenerator = pGenerator;
 }
 
+void SceneNode::accept(Visitor& visitor)
+{
+	visitor.visit(this);
+}
+
 }
